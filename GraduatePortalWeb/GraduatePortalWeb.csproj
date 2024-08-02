@@ -6,4 +6,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Pages\Account\" />
+    <Folder Include="Pages\Grades\" />
+  </ItemGroup>
+
 </Project>
