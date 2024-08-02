@@ -5,17 +5,17 @@ namespace GraduatePortalBusiness
     public class SecurityHelper
     {
 
-        public static string generatePasswordHash(string password)
+        public static string GeneratePasswordHash(string password)
         {
             return BCrypt.Net.BCrypt.EnhancedHashPassword(password);
         }
 
-        public static bool verifyPassword(string password, string passwordHash)
+        public static bool VerifyPassword(string password, string passwordHash)
         {
             return BCrypt.Net.BCrypt.EnhancedVerify(password, passwordHash); 
         }
 
-        public static string getDBConnectionString()
+        public static string GetDBConnectionString()
         {
             string connString = "Server=(localdb)\\MSSQLLocalDB;Database=GraduatePortalDB;Trusted_Connection=True;";
             return connString;

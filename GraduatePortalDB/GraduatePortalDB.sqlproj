@@ -65,4 +65,7 @@
     <Build Include="dbo\Tables\Grade.sql" />
     <Build Include="dbo\Tables\Assignment.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="PopulateDB.sql" />
+  </ItemGroup>
 </Project>

@@ -1,0 +1,54 @@
+﻿@page
+@model GraduatePortalWeb.Pages.Account.RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+@{
+    Layout = "_Layout";
+}
+
+<h2>Register</h2>
+
+<form method="post">
+    <div class="row text-danger" asp-validation-summary="All"></div>
+    <div class="row m-2">
+        <div class="col-12">
+            <label class="form-label" asp-for="newPerson.PersonId">SFA ID</label>
+            <input type="text" class="form-control" asp-for="newPerson.PersonId" placeholder="Enter your SFA ID" />
+            <span asp-validation-for="newPerson.PersonId" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row m-2">
+        <div class="col-12">
+            <label class="form-label" asp-for="newPerson.FirstName">First Name</label>
+            <input type="text" class="form-control" asp-for="newPerson.FirstName" placeholder="Enter your first name" />
+            <span asp-validation-for="newPerson.FirstName" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row m-2">
+        <div class="col-12">
+            <label class="form-label" asp-for="newPerson.LastName">Last Name</label>
+            <input type="text" class="form-control" asp-for="newPerson.LastName" placeholder="Enter your last name" />
+            <span asp-validation-for="newPerson.LastName" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row m-2">
+        <div class="col-12">
+            <label class="form-label" asp-for="newPerson.Email">Email</label>
+            <input type="text" class="form-control" asp-for="newPerson.Email" placeholder="Enter your email" />
+            <span asp-validation-for="newPerson.Email" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row m-2">
+        <div class="col-12">
+            <label class="form-label" asp-for="newPerson.Password">Password</label>
+            <input type="text" class="form-control" asp-for="newPerson.Password" placeholder="Enter your password" />
+            <span asp-validation-for="newPerson.Password" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row m-2">
+        <div class="col-12">
+            <button id="btnRegister" class="btn btn-primary btn-register">Register</button>
+        </div>
+    </div>
+</form>

@@ -7,8 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\Account\" />
     <Folder Include="Pages\Grades\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GraduatePortalBusiness\GraduatePortalBusiness.csproj" />
   </ItemGroup>
 
 </Project>

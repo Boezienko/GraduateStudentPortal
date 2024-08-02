@@ -10,16 +10,16 @@ namespace GraduatePortalWeb.Model
         /////////////////////////////////////////////////////////////
         [Required(ErrorMessage = "First name is required")]
         [Display(Name = "First name: ")]
-        public int FirstName { get; set; }
+        public string FirstName { get; set; }
         /////////////////////////////////////////////////////////////
         [Required(ErrorMessage = "Last name is required")]
         [Display(Name = "Last name: ")]
-        public int LastName { get; set; }
+        public string LastName { get; set; }
         /////////////////////////////////////////////////////////////
         [Required(ErrorMessage = "Password is required")]
         [Display(Name = "Password: ")]
         [RegularExpression("^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{10,}$", ErrorMessage = "Password must be at least 10 characters long and contain at least one number, one lowercase letter, and one uppercase letter.")]
-        public int Password { get; set; }
+        public string Password { get; set; }
         /////////////////////////////////////////////////////////////
         [Required(ErrorMessage = "Email is required")]
         [Display(Name = "Email: ")]
