@@ -1,0 +1,36 @@
+﻿@page
+@model GraduatePortalWeb.Pages.Account.LoginModel
+@{
+    ViewData["Title"] = "Login";
+}
+@{
+    Layout = "_Layout";
+}
+
+<h2>Login</h2>
+
+<form method="post">
+    <div class="row text-danger" asp-validation-summary="All"></div>
+    <div class="row m-2">
+        <div class="col-12">
+            <label class="form-label" asp-for="LoginUser.Email">Email</label>
+            <input type="email" class="form-control" asp-for="LoginUser.Email" placeholder="Enter your email" />
+            <span asp-validation-for="LoginUser.Email" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row m-2">
+        <div class="col-12">
+            <label class="form-label" asp-for="LoginUser.Password">Password</label>
+            <div class="password-container">
+                <input type="password" class="form-control" asp-for="LoginUser.Password" placeholder="Enter your password" id="password" />
+                <button type="button" id="togglePassword" class="btn btn-secondary" onclick="togglePasswordVisibility()"><i id="eyeIcon" class="bi bi-eye"></i></button>
+            </div>
+            <span asp-validation-for="LoginUser.Password" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row m-2">
+        <div class="col-12">
+            <button id="btnLogin" class="btn btn-primary btn-login">Login</button>
+        </div>
+    </div>
+</form>

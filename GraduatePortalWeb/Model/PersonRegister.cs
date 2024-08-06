@@ -2,7 +2,7 @@
 
 namespace GraduatePortalWeb.Model
 {
-    public class Person
+    public class PersonRegister
     {
         [Required(ErrorMessage = "SFA ID is required")]
         [Display(Name = "SFA ID: ")]

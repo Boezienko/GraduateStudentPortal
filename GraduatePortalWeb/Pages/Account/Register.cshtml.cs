@@ -9,7 +9,7 @@ namespace GraduatePortalWeb.Pages.Account
     public class RegisterModel : PageModel
     {
         [BindProperty]
-        public Person newPerson { get; set; }
+        public PersonRegister newPerson { get; set; }
 
         public void OnGet()
         {

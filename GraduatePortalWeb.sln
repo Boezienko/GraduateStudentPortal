@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraduatePortalWeb", "GraduatePortalWeb\GraduatePortalWeb.csproj", "{514AD776-8ACF-45B0-89F4-DCFEB32301CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraduatePortalWeb", "GraduatePortalWeb\GraduatePortalWeb.csproj", "{514AD776-8ACF-45B0-89F4-DCFEB32301CC}"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "GraduatePortalDB", "GraduatePortalDB\GraduatePortalDB.sqlproj", "{DB636EEE-96A9-4FAF-8F58-D4E2F5B66404}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraduatePortalBusiness", "GraduatePortalBusiness\GraduatePortalBusiness.csproj", "{0D0CD843-9C0F-4027-93A4-D90447B6BD82}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraduatePortalBusiness", "GraduatePortalBusiness\GraduatePortalBusiness.csproj", "{0D0CD843-9C0F-4027-93A4-D90447B6BD82}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

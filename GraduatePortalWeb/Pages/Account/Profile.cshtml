@@ -1,0 +1,32 @@
+﻿@page
+@model GraduatePortalWeb.Pages.Account.ProfileModel
+@{
+    ViewData["Title"] = "Profile";
+}
+@{
+    Layout = "_Layout";
+}
+<div class="row m-2">
+    <div class="col-6">
+        <strong>First Name:</strong>
+        <label>@Model.profile.FirstName</label>
+    </div>
+</div>
+<div class="row m-2">
+    <div class="col-4">
+        <strong>Last Name:</strong>
+        <label>@Model.profile.LastName</label>
+    </div>
+</div>
+<div class="row m-2">
+    <div class="col-6">
+        <strong>Email:</strong>
+        <label>@Model.profile.Email</label>
+    </div>
+</div>
+<div class="row m-2">
+    <div class="col-6">
+        <strong>SFA ID:</strong>
+        <label>@Model.profile.PersonId</label>
+    </div>
+</div>
