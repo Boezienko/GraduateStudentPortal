@@ -23,7 +23,7 @@ namespace GraduatePortalWeb.Pages.Account
             string email = HttpContext.User.FindFirstValue(ClaimValueTypes.Email);
             using (SqlConnection conn = new SqlConnection(SecurityHelper.GetDBConnectionString()))
             {
-                string cmdText = "SELECT FirstName, LastName, Email, Telephone, LastLoginTime, PersonId FROM Person WHERE Email=@email";
+                string cmdText = "SELECT FirstName, LastName, Email, PersonId FROM Person WHERE Email=@email";
                 SqlCommand cmd = new SqlCommand(cmdText, conn);
                 cmd.Parameters.AddWithValue("@email", email);
                 conn.Open();
@@ -34,7 +34,7 @@ namespace GraduatePortalWeb.Pages.Account
                     profile.FirstName = reader.GetString(0);
                     profile.LastName = reader.GetString(1);
                     profile.Email = reader.GetString(2);
-                    profile.PersonId = reader.GetInt32(5);
+                    profile.PersonId = reader.GetInt32(3);
                 }
             }
         }
