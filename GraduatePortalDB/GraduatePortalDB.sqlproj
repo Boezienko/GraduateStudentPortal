@@ -63,7 +63,7 @@
     <Build Include="dbo\Tables\Role.sql" />
     <Build Include="dbo\Tables\Person.sql" />
     <Build Include="dbo\Tables\Grade.sql" />
-    <Build Include="dbo\Tables\Assignment.sql" />
+    <Build Include="dbo\Tables\Class.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="PopulateDB.sql" />
