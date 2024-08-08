@@ -1,0 +1,62 @@
+﻿@page
+@using System.Security.Claims
+@model GraduatePortalWeb.Pages.Students.AddStudentModel
+@{
+    ViewData["Title"] = "Add_Student";
+}
+@{
+    if (HttpContext.User.FindFirstValue(ClaimTypes.Role) != null)
+    {
+        Layout = LayoutAuthorizer.GetLayoutFromRole(this.HttpContext);
+    }
+    else
+    {
+        Layout = "_Layout";
+    }
+}
+<form method="post">
+    <div class="row text-danger" asp-validation-summary="All"></div>
+    <div class="row m-2">
+        <div class="col-12">
+            <label class="form-label" asp-for="newStudent.PersonId">SFA ID</label>
+            <input type="text" class="form-control" asp-for="newStudent.PersonId" placeholder="Enter users SFA ID" />
+            <span asp-validation-for="newStudent.PersonId" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row m-2">
+        <div class="col-12">
+            <label class="form-label" asp-for="newStudent.FirstName">First Name</label>
+            <input type="text" class="form-control" asp-for="newStudent.FirstName" placeholder="Enter users first name" />
+            <span asp-validation-for="newStudent.FirstName" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row m-2">
+        <div class="col-12">
+            <label class="form-label" asp-for="newStudent.LastName">Last Name</label>
+            <input type="text" class="form-control" asp-for="newStudent.LastName" placeholder="Enter users last name" />
+            <span asp-validation-for="newStudent.LastName" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row m-2">
+        <div class="col-12">
+            <label class="form-label" asp-for="newStudent.Email">Email</label>
+            <input type="email" class="form-control" asp-for="newStudent.Email" placeholder="Enter users email" />
+            <span asp-validation-for="newStudent.Email" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row m-2">
+        <div class="col-12">
+            <label class="form-label" asp-for="newStudent.Password">Password</label>
+            <div class="password-container">
+                <input type="password" class="form-control" asp-for="newStudent.Password" placeholder="Enter users password" id="password" />
+                <button type="button" id="togglePassword" class="btn btn-secondary"> </button>
+            </div>
+            <span asp-validation-for="newStudent.Password" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row m-2">
+        <div class="col-12">
+            <button id="btnRegister" class="btn btn-primary btn-register">Create Student</button>
+        </div>
+    </div>
+</form>

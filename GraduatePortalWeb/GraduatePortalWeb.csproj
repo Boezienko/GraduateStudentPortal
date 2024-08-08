@@ -18,4 +18,11 @@
     <ProjectReference Include="..\GraduatePortalBusiness\GraduatePortalBusiness.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="Pages\Shared\_LayoutStudent.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>

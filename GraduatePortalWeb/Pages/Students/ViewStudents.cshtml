@@ -1,0 +1,49 @@
+﻿@page
+@using System.Security.Claims
+@model GraduatePortalWeb.Pages.Students.ViewStudentsModel
+@{
+    ViewData["Title"] = "View_Students";
+}
+@{
+    if (HttpContext.User.FindFirstValue(ClaimTypes.Role) != null)
+    {
+        Layout = LayoutAuthorizer.GetLayoutFromRole(this.HttpContext);
+    }
+    else
+    {
+        Layout = "_Layout";
+    }
+}
+
+@foreach (var student in Model.Students)
+{
+    <div class="row m-2 border">
+        <div class="row m-2">
+            <div class="col-2">
+                <label class="form-label" asp-for="@student.FirstName"></label>
+            </div>
+            <div class="col-10">
+                <label>@student.FirstName</label>
+            </div>
+        </div>
+
+        <div class="row m-2">
+            <div class="col-2">
+                <label class="form-label" asp-for="@student.LastName"></label>
+            </div>
+            <div class="col-10">
+                <label>@student.LastName</label>
+            </div>
+        </div>
+
+        <div class="row m-2">
+            <div class="col-2">
+                <label class="form-label" asp-for="@student.Email"></label>
+            </div>
+            <div class="col-10">
+                <label>@student.Email</label>
+            </div>
+        </div>
+
+    </div>
+}

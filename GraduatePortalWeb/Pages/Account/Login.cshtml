@@ -23,7 +23,7 @@
             <label class="form-label" asp-for="LoginUser.Password">Password</label>
             <div class="password-container">
                 <input type="password" class="form-control" asp-for="LoginUser.Password" placeholder="Enter your password" id="password" />
-                <button type="button" id="togglePassword" class="btn btn-secondary" onclick="togglePasswordVisibility()"><i id="eyeIcon" class="bi bi-eye"></i></button>
+                <button type="button" id="togglePassword" class="btn btn-secondary"></button>
             </div>
             <span asp-validation-for="LoginUser.Password" class="text-danger"></span>
         </div>

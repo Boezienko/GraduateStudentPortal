@@ -1,10 +1,18 @@
 ﻿@page
+@using System.Security.Claims
 @model GraduatePortalWeb.Pages.Account.ProfileModel
 @{
     ViewData["Title"] = "Profile";
 }
 @{
-    Layout = "_Layout";
+    if (HttpContext.User.FindFirstValue(ClaimTypes.Role) != null)
+    {
+        Layout = LayoutAuthorizer.GetLayoutFromRole(this.HttpContext);
+    }
+    else
+    {
+        Layout = "_Layout";
+    }
 }
 <div class="row m-2">
     <div class="col-6">
