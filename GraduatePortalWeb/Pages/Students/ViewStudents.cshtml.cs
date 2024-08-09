@@ -22,7 +22,7 @@ namespace GraduatePortalWeb.Pages.Students
         {
             using (SqlConnection conn = new SqlConnection(SecurityHelper.GetDBConnectionString()))
             {
-                string cmdText = "SELECT FirstName, LastName, Email FROM Person " +
+                string cmdText = "SELECT PersonId, FirstName, LastName, Email FROM Person " +
                     "INNER JOIN Role ON Person.RoleId = Role.RoleId " +
                     "WHERE Role.RoleName = 'Student'";
                 SqlCommand cmd = new SqlCommand(cmdText, conn);
@@ -35,9 +35,10 @@ namespace GraduatePortalWeb.Pages.Students
                     {
                         var student = new PersonView();
 
-                        student.FirstName = reader.GetString(0);
-                        student.LastName = reader.GetString(1);
-                        student.Email = reader.GetString(2);
+                        student.PersonId = reader.GetInt32(0);
+                        student.FirstName = reader.GetString(1);
+                        student.LastName = reader.GetString(2);
+                        student.Email = reader.GetString(3);
 
                         Students.Add(student);
                     }
