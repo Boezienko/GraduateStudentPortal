@@ -1,0 +1,56 @@
+﻿@page
+@using System.Security.Claims
+@model GraduatePortalWeb.Pages.Grades.ViewGradesModel
+@{
+    ViewData["Title"] = "View_Grades";
+}
+@{
+    if (HttpContext.User.FindFirstValue(ClaimTypes.Role) != null)
+    {
+        Layout = LayoutAuthorizer.GetLayoutFromRole(this.HttpContext);
+    }
+    else
+    {
+        Layout = "_Layout";
+    }
+}
+
+<div class="row m-2 border">
+    <div class="row m-2">
+        <div class="col-2">
+            <label class="form-label" asp-for="@Model.Student.FirstName"></label>
+            <div class="col-10">
+                <label>@Model.Student.FirstName</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="row m-2">
+        <div class="col-2">
+            <label class="form-label" asp-for="@Model.Student.LastName"></label>
+        </div>
+        <div class="col-10">
+            <label>@Model.Student.LastName</label>
+        </div>
+    </div>
+</div>
+
+@foreach (var grade in Model.Grades)
+{
+    <div class="row m-2 border">
+        <div class="row m-2">
+            <div class="col-2">
+                <label class="form-label" asp-for="@grade.ClassName"></label>
+            </div>
+            <div class="col-3">
+                <label>@grade.ClassName</label>
+            </div>
+            <div class="col-2">
+                <label class="form-label" asp-for="@grade.LetterGrade"></label>
+            </div>
+            <div class="col-3">
+                <label>@grade.LetterGrade</label>
+            </div>
+        </div>
+    </div>
+}
